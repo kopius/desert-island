@@ -1,7 +1,5 @@
 # Desert Island
 
-## The Story of Desert Island
-
 In today's world of unlimited data plans, gigs upon gigs of storage space, and social media feeds that push new photos off the page faster than you can upload them, we wondered...
 
 ...what if an online photo album only let you upload five images?
@@ -12,49 +10,41 @@ The idea for our app rose up out of this question. If you were stranded on a des
 
 Introducing...**Desert Island.**
 
+## Screenshots
 
-[Link to Backend Repo](https://github.com/SynergisticDeepities/desert-island-api)
-||
-[Link to Backend Heroku](https://desert-island-api.herokuapp.com/)
+Coming soon!
 
-### Developing Desert Island
+## Technology
 
-#### User Stories:
-<br />
-As a user, I want to be able to:
-  * Sign up / sign in / change password / sign out
-  * Upload a file
-  * Delete the file I uploaded
-  * Select a specific other person's island to view
-  * Download other people's files
+The Desert Island client is a single-page web app written in HTML5/CSS3/JavaScript. Server calls are handled with jQuery/AJAX. Styling is done with a combination of Sass and Bootstrap. Dynamic rendering of content is done via Handlebars templates.
 
-[Link to Wireframes](https://drive.google.com/file/d/0B1tPaUXMBTnjRjhzMFpUZnVtczg/view)
-||
-[Link to ERD](https://drive.google.com/open?id=0B9qM-5IxeHjzR1F5MW1wUzNnS0E)
+The back end ([repository here](https://github.com/kopius/desert-island-api)) is a Node/Express API that stores user info and file metadata with MongoDB via Mongoose middleware and mLab. Photos are uploaded to an Amazon Web Services S3 file bucket using the aws-sdk Node module.
+
+All dependencies are managed with NPM.
+
+## Development
+
+Desert Island was originally developed by myself and three others as a group project at General Assembly. We began with a simple goal: to build and deploy a full-stack web app that allows users to upload, manage, and share files. Before writing any code, we expanded that goal into a shared vision of restricting users to photos only, and a maximum of five uploads. The 'Desert Island' concept emerged from this early planning stage.
+
+Team members worked together on both the client and API using a centralized Git workflow. Each developer was assigned specific roles in order to streamline development, but everyone contributed code to both the front and back end. The two halves of the app were built in tandem, with the team working in pairs at a single table to facilitate communication. This allowed us to build the app's core functionality very quickly. It also meant we could bring our combined powers to bear on any bugs or issues that arose.
+
+We tackled the solo-user stories first, making sure a user could upload and manage photos before moving on to the sharing feature. Once we had working templates for displaying a user's 'island', it was relatively easy to add a 'read-only' template and a sidebar for browsing other users' islands.
+
+#### Development Materials
+
+These materials offer further insight into the development process for Desert Island:
+
+[User Stories](docs/stories.md) | [Wireframes](docs/wireframes)
 
 
-*Desert Island* was developed with a simple goal in mind: to deploy a client and API capable
-of uploading files to AWS and displaying them for users to interact with.
+## Next Steps
 
-Our four person group worked together on both the client and API using a centralized git
-workflow with feature branches to avoid merge conflicts. Each group member was assigned specific roles in order to streamline development.
+This fork of the Desert Island project will incorporate several additional features in its next release:
 
-As a group we simultaneously built out the front and back end while keeping an open dialogue about what specific features we were working on. This was beneficial because
-when it came to integration of the two there were fewer hurdles to jump.
+#### Social
 
-Though we each did work on both back and front end, our group had a natural division in our group between those who were more comfortable with the front end and the back end. This was a great working strategy, as it let us each take the lead on certain aspects, while simultaneously learning from others.
+Desert Island currently lets users browse other islands at random. I'd like to make this feature more focused and social by allowing users to designate each other as friends and limit the privacy of their islands to friends-only if they choose.
 
-#### Technologies Used:
+#### Improved UI
 
-The front end of this project was built using components from Bootstrap, as well as a [sidebar from Bootsnipp](http://bootsnipp.com/snippets/featured/fancy-sidebar-navigation).
-
-We also used Handlebars templates to dynamically update the user's thumbnails
-and header.
-
-### Unsolved Problems / Future Goals
-
-- Create a shareable link for a user to give others a direct link to their 'island'
-- Create a 'friends' list, or other way to select which users appear in the sidebar
-- Download button for images, or a separate 'image' viewstate
-- Polishing the CSS, and generally 'prettifying'
-- Refactor RESTful routes on both front and back end to be more flexible for different iterations of the application.
+The user interface needs to be tightened up a bit. The next version of Desert Island will have more cohesive styling and a separate view state for single images.
