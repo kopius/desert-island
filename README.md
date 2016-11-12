@@ -34,7 +34,7 @@ We tackled the solo-user stories first, making sure a user could upload and mana
 
 These materials offer further insight into the development process for Desert Island:
 
-[User Stories](docs/stories.md) | [Wireframes](docs/wireframes)
+[User Stories](docs/stories.md) | [Wireframes](docs/wireframes.pdf)
 
 
 ## Next Steps
